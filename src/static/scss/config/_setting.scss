@@ -1,0 +1,198 @@
+html {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    &::-webkit-scrollbar {
+        width: 0px
+    }
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.3rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+
+.clear:before,
+.clear:after {
+    display: table;
+    content: "";
+}
+
+.clear:after {
+    clear: both
+}
+
+button.sc-button {
+    background-color: $blue;
+    border-radius: 0.1rem;
+    width: 100%;
+    height: 0.9rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.9rem;
+    font-size: 0.3rem;
+}
+
+button.sc-button[disabled="disabled"] {
+    background-color: #ccd1dc;
+}
+
+.sc-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(37, 38, 45, 0.4);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.borderB {
+    border-bottom: 1px solid #e7eaf1;
+}
+
+.sc-card {
+    box-shadow: 0 0.02rem 0.3rem 0 rgba(0, 0, 0, .1);
+    border-radius: 0.1rem;
+}
+
+
+/* 进度条 start */
+
+.risk-process {
+    .process-bar {
+        width: 100%;
+        height: 0.26rem;
+        background-color: #eff0f5;
+        border-radius: 0.13rem;
+        position: relative;
+        .reached {
+            height: 0.26rem;
+            border-radius: 0.13rem;
+            position: absolute;
+        }
+    }
+    .sick-risk {
+        width: 100%;
+        margin-top: 0.1rem;
+        display: flex;
+        justify-content: space-between;
+        span {
+            display: block;
+            width: 0.9rem;
+            height: 0.46rem;
+            font-size: 0.26rem;
+            color: $fc-gray;
+            text-align: center;
+            line-height: 0.46rem;
+            border-radius: 0.05rem;
+            ;
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+    &.low {
+        .sick-risk span.active {
+            background-color: #fec547;
+        }
+        .reached {
+            width: 15%;
+            background: -webkit-linear-gradient( left, #fed441, #fec547);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient( right, #fed441, #fec547);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient( right, #fed441, #fec547);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient( to right, #fed441, #fec547);
+            /* 标准的语法 */
+        }
+    }
+    &.middle {
+        .sick-risk span.active {
+            background-color: #f67c5b;
+        }
+        .reached {
+            width: 44%;
+            background: -webkit-linear-gradient( left, #fed441, #f67c5b);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient( right, #fed441, #f67c5b);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient( right, #fed441, #f67c5b);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient( to right, #fed441, #f67c5b);
+            /* 标准的语法 */
+        }
+    }
+    &.high {
+        .sick-risk span.active {
+            background-color: #fa3e30;
+        }
+        .reached {
+            width: 72%;
+            background: -webkit-linear-gradient( left, #fed441, #fa3e30);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient( right, #fed441, #fa3e30);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient( right, #fed441, #fa3e30);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient( to right, #fed441, #fa3e30);
+            /* 标准的语法 */
+        }
+    }
+    &.super {
+        .sick-risk span.active {
+            background-color: #af291e;
+        }
+        .reached {
+            width: 100%;
+            background: -webkit-linear-gradient( left, #fed441, #fa3e30, #af291e);
+            /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient( right, #fed441, #fa3e30, #af291e);
+            /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient( right, #fed441, #fa3e30, #af291e);
+            /* Firefox 3.6 - 15 */
+            background: linear-gradient( to right, #fed441, #fa3e30, #af291e);
+            /* 标准的语法 */
+        }
+    }
+}
+
+
+/* 进度条 end */
+
+
+/* 文字card start */
+
+.text-card {
+    width: 6.7rem;
+    background-color: #f1f2f5;
+    margin: 0 auto;
+    padding: 0.4rem 0.3rem 0.3rem 0.3rem;
+    .title {
+        font-size: 0.3rem;
+        font-weight: bold;
+        color: $fc-gray;
+        margin-bottom: 0.25rem;
+    }
+    .text-content {
+        font-size: 0.3rem;
+        line-height: 0.6rem;
+    }
+}
+
+
+/* 文字card end */
